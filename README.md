@@ -27,6 +27,5 @@ Software: React, MySql, Python
 Hardware: IOS mobile
 
 
-
-###Problem and Rationale
+### Problem and Rationale
 The purpose of this app is to help solve the climate crisis and help people clean up our environment even if it is the smallest amount. A possible issue we could encounter is showing live leaderboard data and developing the social media platform. We will use React, MySql, and Python to develop the application. 
