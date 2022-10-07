@@ -1,13 +1,13 @@
-#ECO
+# ECO
 
-###Setting & Context
+### Setting & Context
 Climate change constitutes an existential threat to our planet. Not only is systemic change necessary, but we as individuals need to change how we live. However, human contribution to environmental changes can occur in many ways, unintentionally or intentionally. This includes car emissions, energy consumption, trash output etc.. A polluted environment may harm us in many ways, including viruses, bacteria, and diseases. 
 We are proposing an app that can help people keep track of their contributions to the environment and try to offset that contribution. It will give users a score that reflects their carbon/ecological footprint; users would be able to see the scores of their friends, have access to a daily checklist, and be able to lower their scores through carbon offsets or cleaning up their local environment. All in all, this app will encourage users to help clean our environment.
 
-###Deliverables
+### Deliverables
 Mobile application on iOS and Android
 
-###Schedule
+### Schedule
 09/19/22 : Design system architecture
 09/26/22 : Set up Dev environment (github)
 10/03/22 : Prioritize and develop features
@@ -22,7 +22,7 @@ Mobile application on iOS and Android
 12/05/22 : Fix any issues caught by the users
 12/12/22 : Final testing
 
-###Materials
+### Materials
 Software: React, MySql, Python
 Hardware: IOS mobile
 
