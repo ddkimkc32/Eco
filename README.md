@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+#ECO
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+###Setting & Context
+Climate change constitutes an existential threat to our planet. Not only is systemic change necessary, but we as individuals need to change how we live. However, human contribution to environmental changes can occur in many ways, unintentionally or intentionally. This includes car emissions, energy consumption, trash output etc.. A polluted environment may harm us in many ways, including viruses, bacteria, and diseases. 
+We are proposing an app that can help people keep track of their contributions to the environment and try to offset that contribution. It will give users a score that reflects their carbon/ecological footprint; users would be able to see the scores of their friends, have access to a daily checklist, and be able to lower their scores through carbon offsets or cleaning up their local environment. All in all, this app will encourage users to help clean our environment.
 
-## Available Scripts
+###Deliverables
+Mobile application on iOS and Android
 
-In the project directory, you can run:
+###Schedule
+09/19/22 : Design system architecture
+09/26/22 : Set up Dev environment (github)
+10/03/22 : Prioritize and develop features
+10/10/22 : Divide workflow
+10/17/22 : Start working on the app
+10/24/22 : Work on visualization for the app
+10/31/22 : Improve app as needed
+11/07/22 : Collect user data
+11/14/22 : Improve as needed
+11/21/22 : Mock run to check implementation
+11/28/22 : Usability testing
+12/05/22 : Fix any issues caught by the users
+12/12/22 : Final testing
 
-### `npm start`
+###Materials
+Software: React, MySql, Python
+Hardware: IOS mobile
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+###Problem and Rationale
+The purpose of this app is to help solve the climate crisis and help people clean up our environment even if it is the smallest amount. A possible issue we could encounter is showing live leaderboard data and developing the social media platform. We will use React, MySql, and Python to develop the application. 
