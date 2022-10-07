@@ -9,17 +9,29 @@ Mobile application on iOS and Android
 
 ### Schedule
 09/19/22 : Design system architecture
+
 09/26/22 : Set up Dev environment (github)
+
 10/03/22 : Prioritize and develop features
+
 10/10/22 : Divide workflow
+
 10/17/22 : Start working on the app
+
 10/24/22 : Work on visualization for the app
+
 10/31/22 : Improve app as needed
+
 11/07/22 : Collect user data
+
 11/14/22 : Improve as needed
+
 11/21/22 : Mock run to check implementation
+
 11/28/22 : Usability testing
+
 12/05/22 : Fix any issues caught by the users
+
 12/12/22 : Final testing
 
 ### Materials
