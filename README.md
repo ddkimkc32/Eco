@@ -5,13 +5,12 @@ Climate change constitutes an existential threat to our planet. Not only is syst
 We are proposing an app that can help people keep track of their contributions to the environment and try to offset that contribution. It will give users a score that reflects their carbon/ecological footprint; users would be able to see the scores of their friends, have access to a daily checklist, and be able to lower their scores through carbon offsets or cleaning up their local environment. All in all, this app will encourage users to help clean our environment.
 
 ### Deliverables
+Web Application
 Mobile application on iOS and Android
 
 ### Schedule
 09/19/22 : Design system architecture
-
 09/26/22 : Set up Dev environment (github)
-
 10/03/22 : Prioritize and develop features
 
 10/10/22 : Divide workflow
