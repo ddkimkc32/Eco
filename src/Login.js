@@ -11,7 +11,7 @@ const Login = () => {
     const [success, setSuccess] = useState(false);
 
     useEffect(() => {
-        useRef.current.focus();
+        userRef.current.focus();
     }, [])
 
     useEffect(() => {
@@ -22,8 +22,7 @@ const Login = () => {
         e.preventDefault();
         setUser('');
         setPwd('');
-        setSuccess(true);//Add Backend here
-        
+        setSuccess(true);//Add Backend here       
     }
 
     return ( 
@@ -45,21 +44,21 @@ const Login = () => {
                             <form onSubmit={handleSubmit}>
                                 <label htmlFor="username">Username:</label>
                                 <input 
-                                type="text" 
-                                id="username"
-                                ref={useRef}
-                                autoComplete="off"
-                                onChange={(e) => setUser(e.target.value)}
-                                value={user}
-                                required
+                                    type="text" 
+                                    id="username"
+                                    ref={userRef}
+                                    autoComplete="off"
+                                    onChange={(e) => setUser(e.target.value)}
+                                    value={user}
+                                    required
                                 />
                                 <label htmlFor="password">Password:</label>
                                 <input 
-                                type="password" 
-                                id="password"
-                                onChange={(e) => setPwd(e.target.value)}
-                                value={pwd}
-                                required
+                                    type="password" 
+                                    id="password"
+                                    onChange={(e) => setPwd(e.target.value)}
+                                    value={pwd}
+                                    required
                                 />
                                 <button>Sign In</button>
                             </form>
