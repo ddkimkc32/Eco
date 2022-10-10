@@ -44,8 +44,7 @@ form {
     padding-bottom: 1rem;
 }
 
-a,
-a:visited {
+a,a:visited {
     color: #fff;
 }
 
@@ -59,8 +58,7 @@ textarea {
     border-radius: 0.5rem;
 }
 
-label,
-button {
+label,button {
     margin-top: 1rem;
 }
 
