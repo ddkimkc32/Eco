@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LOGIN</title>
+</head>
+<body>
+    <p><a href="{{url_for('home')}}"><button>Back</button></a></p>
+    <form action=""method="POST">
+        <h2>Username</h2>
+        <input type="text"name="username">
+        <br>
+        <h2>Password</h2>
+        <input type="text"name="password">
+        <br>
+        <button type="submit">Login</button>
+        <p id="message">{{session['invalid']}}</p>
+    </form>
+</body>
+</html>
