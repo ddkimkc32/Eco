@@ -16,13 +16,5 @@
         <button type="submit">Login</button>
         <p id="message">{{session['invalid']}}</p>
     </form>
-    <script>
-        var message = document.getElementById("message");
-        if (message.innerHTML == "") {
-            message.hidden = true;
-        } else {
-            message.hidden = false;
-        }
-    </script>
 </body>
 </html>
