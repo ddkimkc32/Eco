@@ -39,6 +39,26 @@ def addUser(username, password, score): #Adds user to database
         if conn is not None:
             conn.close()
 
+def authenticateUser(username, password) -> bool:
+    try:
+        stored =getUserInfo(username, 1)
+        return password == stored
+    except:
+        print("Could not retrieve password from username")
+        return False
+
+def getUserInfo(username, index) -> str:
+    conn = sqlite3.connect("user.db")
+    c = conn.cursor()
+    c.execute("SELECT * FROM users WHERE username = '" + username + "'")
+    r = c.fetchall()
+    for i in r:
+        if username == i[0]:
+            return i[index] #Second parameter
+        else:
+            return "Error: Could not fetch result"
+
+
 def displayDB(): #Displays database for debugging
     try:
         conn = sqlite3.connect("user.db")
@@ -52,5 +72,3 @@ def displayDB(): #Displays database for debugging
             c.close()
         if conn is not None:
             conn.close()
-
-displayDB()
