@@ -156,7 +156,7 @@ const Registration = () => {
                         Already registered?<br />
                         <span className="line">
                             {/*put Login link here*/}
-                            <a href="./Login">Sign In</a>
+                            <a href="/Login">Sign In</a>
                         </span>
                     </p>
                 </section>

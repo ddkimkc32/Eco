@@ -1,4 +1,7 @@
 import {useRef, useState, useEffect} from 'react';
+import Registration from './Registration';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import React, { Component } from 'react';
 // import {Link} from "react-router-dom";
 // import { Nav, NavLink, NavMenu } 
 //     from "./NavbarElements";
@@ -69,11 +72,12 @@ const Login = () => {
                                 Need an Account?<br />
                                 <span className="Line">
                                     {/*Link to the registration page*/}
-                                    <a href={"./Registration"}>Sign Up</a>
+                                    <a href="/Registration">Sign Up</a>
                                     {/* <Link to="/Registration">Sign Up</Link> */}
                                     {/* <NavLink to="/Registration" activeStyle>
                                         Sign Up
                                     </NavLink> */}
+                                    {/* <Route path="/Registration.js" component={Registration}/> */}
                                 </span>
                             </p>
                         </section>

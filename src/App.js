@@ -1,12 +1,18 @@
-import Registration from './Registration';
+
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Login from './Login';
+import Registration from './Registration';
 
 function App() {
 
   return (
     <main className="App">
-      <Registration />  
-      <Login />
+      <Router>
+        <Routes>
+          <Route exact path="/Login" element={<Login />} />
+          <Route exact path="/Registration" element={<Registration />} />
+        </Routes>
+      </Router>
     </main>
   );
 }
