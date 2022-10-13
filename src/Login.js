@@ -12,6 +12,7 @@ const Login = () => {
 
     const [user, setUser] = useState('');
     const [pwd, setPwd] = useState('');
+    const [email, setEmail] = useState('');
     const [errMsg, setErrMsg] = useState('');
     const [success, setSuccess] = useState(false);
 
@@ -21,13 +22,52 @@ const Login = () => {
 
     useEffect(() => {
         setErrMsg('');
-    }, [user, pwd])
+    }, [user, pwd, email])
 
-    const handleSubmit = async (e) => {
+    let handleSubmit = async (e) => {
+        fetch('http://127.0.0.1:5000/register', {
+
+            method: 'POST', 
+            mode: 'cors', 
+            headers: { "Access-Control-Allow-Origin" : "*",
+            "Access-Control-Allow-Methods" : "GET,POST,PUT,DELETE,OPTIONS",
+            "Access-Control-Allow-Headers": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
+        },
+            body: JSON.stringify({
+                username: user,
+                password: pwd,
+                email: email
+            })
+            
+          })
         e.preventDefault();
         setUser('');
         setPwd('');
-        setSuccess(true);//Add Backend here       
+        setEmail('');
+        setSuccess(true);
+        console.log(fetch.user)
+        // try {
+        //     console.log("Submitted")
+        //     let res = await fetch("http://127.0.0.1:5000/register", {
+        //       method: "POST",
+        //       headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
+        //       body: JSON.stringify({
+        //         username: user,
+        //         password: pwd,
+        //         email: email,
+        //       }),
+        //     });
+        // // let resJson = await res.json();
+        // if (res.status === 200){
+        //     setUser('');
+        //     setPwd('');
+        //     setEmail('');
+        //     setSuccess(true);
+        // }
+        // }catch (err) {
+        //     console.log(err);
+        //   }
+    
     }
 
     return ( 
@@ -63,6 +103,15 @@ const Login = () => {
                                     id="password"
                                     onChange={(e) => setPwd(e.target.value)}
                                     value={pwd}
+                                    required
+                                />
+                                 <label htmlFor="email">Email:</label>
+                                <input 
+                                    type="text" 
+                                    id="email"
+                                    autoComplete="off"
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    value={email}
                                     required
                                 />
                                 <button>Sign In</button>
