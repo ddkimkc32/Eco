@@ -1,8 +1,11 @@
 import {useRef, useState, useEffect} from 'react';
+
 import Registration from './Registration';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import React, { Component } from 'react';
 import axios from "axios"
+
+
 // import {Link} from "react-router-dom";
 // import { Nav, NavLink, NavMenu } 
 //     from "./NavbarElements";
