@@ -2,6 +2,7 @@ import {useRef, useState, useEffect} from 'react';
 import Registration from './Registration';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import React, { Component } from 'react';
+import axios from "axios"
 // import {Link} from "react-router-dom";
 // import { Nav, NavLink, NavMenu } 
 //     from "./NavbarElements";
@@ -25,27 +26,32 @@ const Login = () => {
     }, [user, pwd, email])
 
     let handleSubmit = async (e) => {
-        fetch('http://127.0.0.1:5000/register', {
 
-            method: 'POST', 
-            mode: 'cors', 
-            headers: { "Access-Control-Allow-Origin" : "*",
-            "Access-Control-Allow-Methods" : "GET,POST,PUT,DELETE,OPTIONS",
-            "Access-Control-Allow-Headers": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
-        },
-            body: JSON.stringify({
-                username: user,
-                password: pwd,
-                email: email
-            })
-            
-          })
+
+        // const creds = JSON.stringify({user: user, password: pwd, email: email})
+        // console.log(creds)
+        // axios.post('/register', creds)
+        // .then((result) => {
+        //     return("ok")
+        //     console.log(result)
+        // })
         e.preventDefault();
         setUser('');
         setPwd('');
         setEmail('');
+        fetch('/register', {
+
+            method: 'POST', 
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+                username: user,
+                password: pwd,
+                email: email
+            }),
+            
+          })
+  
         setSuccess(true);
-        console.log(fetch.user)
         // try {
         //     console.log("Submitted")
         //     let res = await fetch("http://127.0.0.1:5000/register", {
