@@ -5,6 +5,7 @@ import React from 'react'
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/; //Starts will a lower or upper case, followed by 3 to 23 characters lower or upper case or digits or symbols
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/; //1 lower case, 1 upper case, 1 number, 1 special character
+const EMAIL_REGEX =/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 const REGISTER_URL = '/register';
 
 
@@ -27,6 +28,14 @@ const Registration = () => {
     const [errMsg, setErrMsg] = useState('');
     const [success, setSuccess] = useState(false);
 
+    const [email, setEmail] = useState('');
+    const [validEmail, setValidEmail] = useState(false);
+    const [emailFocus, setEmailFocus] = useState(false);
+
+    const [matchEmail, setMatchEmail] = useState('');
+    const [validEmailMatch, setValidEmailMatch] = useState(false);
+    const [matchEmailFocus, setMatchEmailFocus] = useState(false);
+
     useEffect(() => {
         userRef.current.focus();
     }, [])
@@ -48,20 +57,30 @@ const Registration = () => {
     }, [pwd, matchPwd])
 
     useEffect(() => {
+        const result = EMAIL_REGEX.test(email);
+        console.log(result);
+        console.log(email);
+        setValidEmail(result);
+        // match = email === matchEmail;
+        //setValidEmail(match);
+    }, [email])
+
+    useEffect(() => {
         setErrMsg('')
-    }, [user, pwd, matchPwd])
+    }, [user, pwd, matchPwd, email])
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
         const v1 = USER_REGEX.test(user);
         const v2 = PWD_REGEX.test(pwd);
-        if(!v1 || !v2){
+        const v3 = EMAIL_REGEX.test(email);
+        if(!v1 || !v2 || !v3){
             setErrMsg("Invalid Entry");
             return;
         }
         //Add backend here
-        console.log(user,pwd);
+        console.log(user,pwd,email);
         setSuccess(true);
     }
 
@@ -71,7 +90,7 @@ const Registration = () => {
                 <section>
                     <h1>Success!</h1>
                     <p>
-                        <a href="#">Sign In</a>
+                        <a href="/Login">Sign In</a>
                     </p>
                 </section>
             ) : (
@@ -150,7 +169,30 @@ const Registration = () => {
                             Must match the first password input field.
                         </p>
 
-                        <button disabled={!validName || !validPwd || !validMatch ? true : false}>Sign Up</button>
+                        <label htmlFor="email">
+                            Email:
+                            <FontAwesomeIcon icon={faCheck} className={validEmail ? "valid" : "hide"} />
+                            <FontAwesomeIcon icon={faTimes} className={validEmail || !email ? "hide" : "invalid"} />
+                        </label>
+                        <input
+                            type="text"
+                            id="email"
+                            //ref={userRef}
+                            autoComplete="off"
+                            onChange={(e) => setEmail(e.target.value)}
+                            value={email}
+                            required
+                            aria-invalid={validEmail ? "false" : "true"}
+                            aria-describedby="uidnote"
+                            onFocus={() => setEmailFocus(true)}
+                            onBlur={() => setEmailFocus(false)}
+                        />
+                        <p id="uidnote" className={emailFocus && email && !validEmail ? "instructions" : "offscreen"}>
+                            <FontAwesomeIcon icon={faInfoCircle} />
+                            Must have @ and .com<br />
+                        </p>
+
+                        <button disabled={!validName || !validPwd || !validMatch || !validEmail ? true : false}>Sign Up</button>
                     </form>
                     <p>
                         Already registered?<br />

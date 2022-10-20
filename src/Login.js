@@ -6,10 +6,6 @@ import React, { Component } from 'react';
 import axios from "axios"
 
 
-// import {Link} from "react-router-dom";
-// import { Nav, NavLink, NavMenu } 
-//     from "./NavbarElements";
-
 const Login = () => {
     const userRef = useRef();
     const errRef = useRef();
@@ -54,7 +50,7 @@ const Login = () => {
             
           })
   
-        setSuccess(true);
+        //setSuccess(true);
         // try {
         //     console.log("Submitted")
         //     let res = await fetch("http://127.0.0.1:5000/register", {
@@ -129,13 +125,7 @@ const Login = () => {
                             <p>
                                 Need an Account?<br />
                                 <span className="Line">
-                                    {/*Link to the registration page*/}
                                     <a href="/Registration">Sign Up</a>
-                                    {/* <Link to="/Registration">Sign Up</Link> */}
-                                    {/* <NavLink to="/Registration" activeStyle>
-                                        Sign Up
-                                    </NavLink> */}
-                                    {/* <Route path="/Registration.js" component={Registration}/> */}
                                 </span>
                             </p>
                         </section>
