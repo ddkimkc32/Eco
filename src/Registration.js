@@ -2,6 +2,7 @@ import { useRef, useState, useEffect } from "react";
 import { faCheck, faTimes, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from 'react'
+import './index.css';
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/; //Starts will a lower or upper case, followed by 3 to 23 characters lower or upper case or digits or symbols
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/; //1 lower case, 1 upper case, 1 number, 1 special character
@@ -17,9 +18,9 @@ const Registration = () => {
     const [validName, setValidName] = useState(false);
     const [userFocus, setUserFocus] = useState(false);
 
-    const[pwd, setPwd] = useState('');
-    const[validPwd, setValidPwd] = useState(false);
-    const[pwdFocus, setPwdFocus] = useState(false);
+    const [pwd, setPwd] = useState('');
+    const [validPwd, setValidPwd] = useState(false);
+    const [pwdFocus, setPwdFocus] = useState(false);
 
     const [matchPwd, setMatchPwd] = useState('');
     const [validMatch, setValidMatch] = useState(false);
@@ -31,10 +32,6 @@ const Registration = () => {
     const [email, setEmail] = useState('');
     const [validEmail, setValidEmail] = useState(false);
     const [emailFocus, setEmailFocus] = useState(false);
-
-    const [matchEmail, setMatchEmail] = useState('');
-    const [validEmailMatch, setValidEmailMatch] = useState(false);
-    const [matchEmailFocus, setMatchEmailFocus] = useState(false);
 
     useEffect(() => {
         userRef.current.focus();
@@ -61,8 +58,6 @@ const Registration = () => {
         console.log(result);
         console.log(email);
         setValidEmail(result);
-        // match = email === matchEmail;
-        //setValidEmail(match);
     }, [email])
 
     useEffect(() => {
