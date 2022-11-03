@@ -113,17 +113,19 @@ button {
     display: inline-block;
 }
 
-
 .picture {
     width: 200px;
     height: 200px;
+    justify-content: center;
 }
+
 .body {
     background-color: rgb(189, 246, 143);
 }
+
 .profile_info {
     /* background-color: rgba(238, 208, 208, 0.137); */
-    background-image: linear-gradient(red, yellow);
+    background-image: linear-gradient(rgb(37, 95, 184), rgb(118, 189, 98));
     width: 500px;
     height: 200px;
     display: flex;
@@ -132,8 +134,8 @@ button {
 }
 
 .profile_picture {
-    width: 180px;
-    height: 180px;
+    width: 145px;
+    height: 145px;
     border-radius: 80px;
     margin-top: 10%;
 }
@@ -161,4 +163,11 @@ button {
     align-content: center;
     margin-left: 10px;
     margin-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.posts {
+    height: 600px;
+    width: 500px;
 }

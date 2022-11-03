@@ -1,5 +1,6 @@
 import React from 'react';
 import './index.css';
+import Login from './Login';
 
 const User_Profile = () => {
   return (
@@ -27,6 +28,12 @@ const User_Profile = () => {
             <p>This is a plane</p>
           </div>
       </div>
+      <p>
+          <span className="Line">
+              {/*put Log out link here*/}
+              <a href="/Login">Log Out</a>
+          </span>
+      </p>
     </div>
   )
 }

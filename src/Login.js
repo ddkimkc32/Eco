@@ -80,7 +80,7 @@ const Login = () => {
                     <h1> You are logged in!</h1>
                     <br />
                     <p>
-                        <a href="#">Go to Home</a>
+                        <a href="/Login">Go to Home</a>
                     </p>
                 </section>
                 ) : (
@@ -123,6 +123,7 @@ const Login = () => {
                                 Need an Account?<br />
                                 <span className="Line">
                                     <a href="/Registration">Sign Up</a>
+                                    <a href="/User_Profile">Profile</a>
                                 </span>
                             </p>
                         </section>
