@@ -13,6 +13,7 @@ const REGISTER_URL = '/register';
 const Registration = () => {
     const userRef = useRef();
     const errRef = useRef();
+    const emlRef = useRef();
 
     const [user, setUser] = useState('');
     const [validName, setValidName] = useState(false);
@@ -172,7 +173,7 @@ const Registration = () => {
                         <input
                             type="text"
                             id="email"
-                            //ref={userRef}
+                            ref={emlRef}
                             autoComplete="off"
                             onChange={(e) => setEmail(e.target.value)}
                             value={email}
