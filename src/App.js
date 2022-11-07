@@ -8,14 +8,14 @@ function App() {
 
   return (
     <main className="App">
-      <Router>
+      {/* <Router>
         <Routes>
           <Route path='/User_Profile' element={<User_Profile />} />
           <Route path='/Login' element={<Login />} />
           <Route path='/Registration' element={<Registration />} />
         </Routes>
-      </Router>
-      {/* <Login /> */}
+      </Router> */}
+      <User_Profile />
     </main>
   );
 }
