@@ -23,7 +23,7 @@ const User_Profile = () => {
           </div>
       </div>
       <div className='score_chart'>
-
+        {/* Add the score history chart here */}
       </div>
       <div className='posts'>
           <div className='post'>
