@@ -1,8 +1,11 @@
-import React from 'react';
 import './index.css';
 import Login from './Login';
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
 
 const User_Profile = () => {
+
   return (
     <div className='body'>
       <div className='profile_info'>
@@ -22,8 +25,24 @@ const User_Profile = () => {
               </div>
           </div>
       </div>
-      <div className='score_chart'>
-        {/* Add the score history chart here */}
+      <div id='post'>
+
+        <form id='post-form' onSubmit={(e) => {
+
+            e.preventDefault();
+            fetch('/register', {
+
+                method: 'POST', 
+                // Add Backend
+                
+              })
+            }}
+          >
+          <label> Write Post: 
+            <input type="text" name="Write something" />
+          </label>
+          <input type="submit" value="Post" />
+        </form>
       </div>
       <div className='posts'>
           <div className='post'>
