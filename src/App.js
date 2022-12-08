@@ -3,6 +3,7 @@ import Login from './Login';
 import Registration from './Registration';
 import React, { Component } from 'react';
 import User_Profile from './User_Profile';
+import Feed from './Feed';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         </Routes>
       </Router> */}
       <User_Profile />
+      <Feed />
     </main>
   );
 }

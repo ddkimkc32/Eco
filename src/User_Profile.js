@@ -1,10 +1,17 @@
 import './index.css';
+import {useRef, useState, useEffect} from 'react';
 import Login from './Login';
 import * as React from 'react';
+import {Card} from 'antd';
+import { Input, List, Avatar } from 'antd';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 
 const User_Profile = () => {
+  const [content, setContent] = useState('');
+  const [username, setUsername] = useState('');
+  const [id, setId] = useState('');
+  const [results, setResult] = useState('')
 
   return (
     <div className='body'>
@@ -26,20 +33,24 @@ const User_Profile = () => {
           </div>
       </div>
       <div id='post'>
-
         <form id='post-form' onSubmit={(e) => {
 
             e.preventDefault();
-            fetch('/register', {
-
-                method: 'POST', 
-                // Add Backend
-                
+            fetch('/post', {
+              method: 'POST', 
+              headers: {'Content-Type': 'application/json'},
+              body: JSON.stringify({
+                  id: id,
+                  username: username,
+                  content: content
+              }),
               })
             }}
           >
           <label> Write Post: 
-            <input type="text" name="Write something" />
+            <input type ="text" name= "id" onChange={(e) => setId(e.target.value)}/>
+            <input type ="text" name="username" onChange={(e) => setUsername(e.target.value)}/>
+            <input type="text" name="Write something" onChange={(e) => setContent(e.target.value)}/>
           </label>
           <input type="submit" value="Post" />
         </form>
