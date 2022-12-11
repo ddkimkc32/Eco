@@ -19,7 +19,7 @@ function App() {
       </Router>
       <User_Profile />
       <Feed /> */}
-      < Registration />
+      < Feed />
     </main>
   );
 }
