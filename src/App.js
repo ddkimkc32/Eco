@@ -16,9 +16,10 @@ function App() {
           <Route path='/Login' element={<Login />} />
           <Route path='/Registration' element={<Registration />} />
         </Routes>
-      </Router> */}
+      </Router>
       <User_Profile />
-      <Feed />
+      <Feed /> */}
+      < Registration />
     </main>
   );
 }

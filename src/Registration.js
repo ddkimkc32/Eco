@@ -34,6 +34,17 @@ const Registration = () => {
     const [validEmail, setValidEmail] = useState(false);
     const [emailFocus, setEmailFocus] = useState(false);
 
+    let [electric, setElectric] = useState('');
+    let [gas, setGas] = useState('');
+    let [oil, setOil] = useState('');
+    let [mileage, setMileage] = useState('');
+    let [shortFlights, setShortFlights] = useState('');
+    let [longFlights, setLongFlights] = useState('');
+    let total = 0;
+    const newspaper = false;
+    const aluminium = false;
+
+
     useEffect(() => {
         userRef.current.focus();
     }, [])
@@ -78,6 +89,26 @@ const Registration = () => {
         //Add backend here
         console.log(user,pwd,email);
         setSuccess(true);
+    }
+
+    const calculateScore = () => {
+        electric *= 105;
+        gas += 105;
+        oil *= 113;
+        mileage *= 0.79;
+        shortFlights *= 11;
+        longFlights *= 44;
+
+        total = electric + gas + oil + mileage + shortFlights + longFlights;
+
+         if(newspaper == false){
+            total += 184;
+        }
+        if(aluminium == false){
+            total += 166
+        }
+
+        return total;
     }
 
         return (
@@ -188,7 +219,59 @@ const Registration = () => {
                             Must have @ and .com<br />
                         </p>
 
-                        <button disabled={!validName || !validPwd || !validMatch || !validEmail ? true : false}>Sign Up</button>
+                        {/* Score Counting */}
+                        <label>Electricity</label>
+                        <input 
+                            type="text"
+                            required
+                            value={electric}
+                            onChange={(e) => setElectric(e.target.value)}
+                        />
+
+                        <label>Gas</label>
+                        <input 
+                            type="text"
+                            required
+                            value={gas}
+                            onChange={(e) => setGas(e.target.value)}
+                        />
+
+                        <label>Oil</label>
+                        <input 
+                            type="text"
+                            required
+                            value={oil}
+                            onChange={(e) => setOil(e.target.value)}
+                        />
+
+                        <label>Mileage</label>
+                        <input 
+                            type="text"
+                            required
+                            value={mileage}
+                            onChange={(e) => setMileage(e.target.value)}
+                        />
+
+                        <label>Short Flights</label>
+                        <input 
+                            type="text"
+                            required
+                            value={shortFlights}
+                            onChange={(e) => setShortFlights(e.target.value)}
+                        />
+
+                        <label>Long Flights</label>
+                        <input 
+                            type="text"
+                            required
+                            value={longFlights}
+                            onChange={(e) => setLongFlights(e.target.value)}
+                        />
+
+                        <button disabled={!validName || !validPwd || !validMatch || !validEmail ? true : false} 
+                        onClick={calculateScore}>
+                            Sign Up
+                            </button>
                     </form>
                     <p>
                         Already registered?<br />
@@ -204,3 +287,4 @@ const Registration = () => {
 }
 
 export default Registration
+
