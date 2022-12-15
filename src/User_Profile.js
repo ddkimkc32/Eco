@@ -23,7 +23,7 @@ const User_Profile = () => {
               <h3 className='user_name'>ECO</h3>
               <div className="user_details">
                   <h5>Score:</h5>
-                  <p  className='score'>500</p>
+                  <p  className='score'>37607</p>
                   <h5>Friends:</h5>
                   <p className='friends'>10</p>
               </div>
